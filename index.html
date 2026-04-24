@@ -1,233 +1,203 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人主页</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘太阳 - 个人网站</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Sunny</a>
-      <div class="nav-links">
-        <a href="#about">关于</a>
-        <a href="#knowledge">AI 知识库</a>
-        <a href="#reading">读书笔记</a>
-        <a href="#social">社媒账号</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="菜单">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">刘太阳</a>
+            <div class="nav-links">
+                <a href="#ai-knowledge">AI知识库</a>
+                <a href="#reading-reports">读书报告</a>
+                <a href="#social-media">社媒账号</a>
+                <a href="#about">关于我</a>
+            </div>
+        </div>
+    </nav>
 
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">你好，我是</p>
-      <h1 class="hero-name">刘太阳</h1>
-      <p class="hero-tagline">产品设计师 & 技术探索者</p>
-      <p class="hero-desc">
-        热衷于将复杂问题转化为简洁优雅的解决方案。<br>
-        相信技术与人文的交汇处，藏着最美的可能性。
-      </p>
-      <div class="hero-cta">
-        <a href="#about" class="btn-primary">了解更多</a>
-        <a href="#social" class="btn-secondary">联系我</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-gradient"></div>
-      <div class="hero-pattern"></div>
-    </div>
-  </section>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">刘太阳</h1>
+            <p class="hero-subtitle">AI探索者 & 社科爱好者</p>
+            <p class="hero-desc">信奉长期主义，践行输出式学习</p>
+        </div>
+    </section>
 
-  <section class="section" id="about">
-    <div class="section-inner">
-      <span class="section-eyebrow">01</span>
-      <h2 class="section-title">关于我</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <div class="about-icon">🎓</div>
-          <h3>教育背景</h3>
-          <p>浙江大学 · 计算机科学与技术硕士<br>研究方向：人机交互与用户体验设计</p>
+    <section id="ai-knowledge" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">AI知识库</h2>
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="prompts">Prompts</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="resources">学习资源</button>
+            </div>
+            <div class="tab-content active" id="tab-prompts">
+                <div class="prompt-cards">
+                    <div class="prompt-card" data-prompt="reading">
+                        <div class="prompt-card-icon">📖</div>
+                        <h3>读书 Prompt</h3>
+                        <p>深度阅读辅助提示词，用于系统化分析书籍内容</p>
+                        <span class="prompt-card-link">查看详情 →</span>
+                    </div>
+                    <div class="prompt-card" data-prompt="oral">
+                        <div class="prompt-card-icon">🗣️</div>
+                        <h3>口语 Prompt</h3>
+                        <p>英语口语练习辅助提示词</p>
+                        <span class="prompt-card-link">查看详情 →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-skills">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>深度阅读</h3>
+                        <p>系统化书籍分析与批判性思考</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>知识管理</h3>
+                        <p>个人知识体系的构建与优化</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>内容创作</h3>
+                        <p>跨平台内容策划与产出</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-resources">
+                <div class="resources-list">
+                    <a href="#" class="resource-item">
+                        <h3>AI 研习社</h3>
+                        <p>AI 领域前沿资讯与深度分析</p>
+                    </a>
+                    <a href="#" class="resource-item">
+                        <h3>学术论文精读</h3>
+                        <p>社会科学经典论文导读</p>
+                    </a>
+                    <a href="#" class="resource-item">
+                        <h3>工具与方法论</h3>
+                        <p>提升效率的实用工具与思维框架</p>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="about-card">
-          <div class="about-icon">💼</div>
-          <h3>工作经历</h3>
-          <p>现任某科技公司高级产品设计师<br>曾就职于阿里巴巴、字节跳动<br>8 年产品设计与研发经验</p>
-        </div>
-        <div class="about-card">
-          <div class="about-icon">🔧</div>
-          <h3>技能领域</h3>
-          <p>产品设计 · 前端开发 · AI 应用<br>Python · React · SwiftUI<br>大语言模型应用与微调</p>
-        </div>
-        <div class="about-card">
-          <div class="about-icon">🎯</div>
-          <h3>兴趣方向</h3>
-          <p>AI Native 产品 · 知识管理<br>量化自我 · 数字花园<br>认知科学与学习方法论</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-dark" id="knowledge">
-    <div class="section-inner">
-      <span class="section-eyebrow section-eyebrow-light">02</span>
-      <h2 class="section-title section-title-light">AI 知识库</h2>
-      <p class="section-sub">系统化整理的人工智能学习笔记与实践总结</p>
-      <div class="knowledge-grid">
-        <div class="knowledge-card">
-          <div class="knowledge-tag">基础理论</div>
-          <h3>机器学习核心概念</h3>
-          <p>监督学习、无监督学习、强化学习的原理与实践。从线性回归到梯度提升树的完整推导。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
+    <section id="reading-reports" class="section section-alt">
+        <div class="section-inner">
+            <h2 class="section-title">读书报告</h2>
+            <div class="bookshelf">
+                <div class="book-card" data-book="burnout-society">
+                    <div class="book-cover">
+                        <img src="book.jpg" alt="倦怠社会">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">倦怠社会</h3>
+                        <p class="book-author">韩炳哲</p>
+                        <button class="book-report-link">阅读读书报告 →</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="knowledge-card">
-          <div class="knowledge-tag">深度学习</div>
-          <h3>神经网络架构演进</h3>
-          <p>从 MLP 到 Transformer：CNN、RNN、LSTM、Attention 机制的发展脉络与关键创新。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
-        </div>
-        <div class="knowledge-card">
-          <div class="knowledge-tag">大语言模型</div>
-          <h3>LLM 训练与应用</h3>
-          <p>预训练、SFT、RLHF 全流程解析。Prompt Engineering、RAG、Agent 架构的工程实践。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
-        </div>
-        <div class="knowledge-card">
-          <div class="knowledge-tag">计算机视觉</div>
-          <h3>视觉模型与应用</h3>
-          <p>目标检测、图像分割、多模态模型。Stable Diffusion 原理与图像生成技术总结。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
-        </div>
-        <div class="knowledge-card">
-          <div class="knowledge-tag">AI 产品</div>
-          <h3>AI Native 产品设计</h3>
-          <p>AI 产品的交互范式、用户体验设计原则。Copilot 模式 vs Agent 模式的产品思考。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
-        </div>
-        <div class="knowledge-card">
-          <div class="knowledge-tag">工程实践</div>
-          <h3>MLOps 与部署</h3>
-          <p>模型训练基础设施、模型服务化、向量数据库、LangChain/LlamaIndex 框架实践。</p>
-          <span class="knowledge-link">阅读笔记 →</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="reading">
-    <div class="section-inner">
-      <span class="section-eyebrow">03</span>
-      <h2 class="section-title">读书笔记</h2>
-      <p class="section-sub">近期阅读的书籍与思考摘要</p>
-      <div class="reading-list">
-        <div class="reading-item">
-          <div class="reading-cover">
-            <span>📖</span>
-          </div>
-          <div class="reading-info">
-            <span class="reading-date">2026 年 4 月</span>
-            <h3>设计心理学</h3>
-            <p class="reading-author">唐纳德·诺曼</p>
-            <p class="reading-note">好的设计需要同时考虑可视性、反馈、限制、映射和一致性。设计思维不仅是设计师的工具，更是解决问题的通用方法论。其中关于「示能性」的讨论让我重新审视了产品中每一个交互元素存在的意义。</p>
-          </div>
+    <section id="social-media" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">社媒账号</h2>
+            <div class="social-grid">
+                <a href="https://space.bilibili.com/581280701" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon bilibili-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">Bilibili</span>
+                        <span class="social-handle">@太阳不加班</span>
+                    </div>
+                </a>
+                <a href="https://xhslink.com/m/9JRoQnoLqaL" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon xiaohongshu-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.95 7.2c-.15-.6-.45-1.05-.9-1.35-.3-.15-.6-.3-1.05-.3-.45 0-.9.15-1.2.45-.3.3-.45.6-.6 1.05-.15.45-.15.9-.15 1.35v2.4c0 .45.15.9.45 1.2.3.3.6.45 1.05.45.45 0 .9-.15 1.2-.45.3-.3.45-.75.45-1.2v-1.5h-1.5v-.75h2.25v2.25c0 .75-.3 1.35-.75 1.8-.45.45-1.05.75-1.8.75-.75 0-1.35-.3-1.8-.75-.45-.45-.75-1.05-.75-1.8v-2.4c0-.75.3-1.35.75-1.8.45-.45 1.05-.75 1.8-.75.6 0 1.2.15 1.65.45.45.3.75.75.9 1.35h-.9zM8.55 14.7h-2.1V9.3h2.1c.6 0 1.05.15 1.35.45.3.3.45.75.45 1.35v2.25c0 .6-.15 1.05-.45 1.35-.3.3-.75.45-1.35.45zm0-4.65h-.75v3.9h.75c.3 0 .6-.15.75-.3.15-.15.3-.45.3-.75v-1.8c0-.3-.15-.6-.3-.75-.15-.15-.45-.3-.75-.3z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">小红书</span>
+                        <span class="social-handle">@太阳不加班</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Sunny-Liu2100" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon github-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">GitHub</span>
+                        <span class="social-handle">@Sunny-Liu2100</span>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="reading-item">
-          <div class="reading-cover">
-            <span>📖</span>
-          </div>
-          <div class="reading-info">
-            <span class="reading-date">2026 年 3 月</span>
-            <h3>为什么伟大不能被计划</h3>
-            <p class="reading-author">Kenneth Stanley / Joel Lehman</p>
-            <p class="reading-note">目标驱动 vs 有趣驱动。在探索未知领域时，过强的目标导向反而会限制发现的可能。这一观点深刻影响了我对 AI 研究和产品创新的思考路径——有时候，「有趣」本身就是一个足够好的指引。</p>
-          </div>
-        </div>
-        <div class="reading-item">
-          <div class="reading-cover">
-            <span>📖</span>
-          </div>
-          <div class="reading-info">
-            <span class="reading-date">2026 年 2 月</span>
-            <h3>思考，快与慢</h3>
-            <p class="reading-author">丹尼尔·卡尼曼</p>
-            <p class="reading-note">系统 1 和系统 2 的区分对设计 AI 交互有直接启发——如何让 AI 工具适配人类的双系统思维？理解了认知偏误的机制，才能设计出真正「符合直觉」的人机交互体验。</p>
-          </div>
-        </div>
-        <div class="reading-item">
-          <div class="reading-cover">
-            <span>📖</span>
-          </div>
-          <div class="reading-info">
-            <span class="reading-date">2026 年 1 月</span>
-            <h3>创新者的窘境</h3>
-            <p class="reading-author">克莱顿·克里斯坦森</p>
-            <p class="reading-note">大公司为什么会失败？不是因为管理不善，恰恰是因为管理太好。颠覆性创新往往从边缘市场起步——这对 AI 创业公司的战略选择有很大启发：不要在大公司的战场打仗。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-accent" id="social">
-    <div class="section-inner">
-      <span class="section-eyebrow section-eyebrow-light">04</span>
-      <h2 class="section-title section-title-light">社媒账号</h2>
-      <p class="section-sub section-sub-light">在这些地方可以找到我</p>
-      <div class="social-grid">
-        <a href="#" class="social-card">
-          <div class="social-icon">🐦</div>
-          <h3>Twitter / X</h3>
-          <p>@zhangwei_design</p>
-          <span>分享 AI 产品设计与技术观察</span>
-        </a>
-        <a href="#" class="social-card">
-          <div class="social-icon">📝</div>
-          <h3>微信公众号</h3>
-          <p>设计几何</p>
-          <span>每周一篇深度产品设计文章</span>
-        </a>
-        <a href="#" class="social-card">
-          <div class="social-icon">📺</div>
-          <h3>Bilibili</h3>
-          <p>@张伟的设计课</p>
-          <span>AI 产品设计教程与工具分享</span>
-        </a>
-        <a href="#" class="social-card">
-          <div class="social-icon">💻</div>
-          <h3>GitHub</h3>
-          <p>@zhangwei-design</p>
-          <span>开源项目与技术实验</span>
-        </a>
-        <a href="#" class="social-card">
-          <div class="social-icon">📸</div>
-          <h3>即刻</h3>
-          <p>@张伟的碎片笔记</p>
-          <span>日常灵感与碎片化思考</span>
-        </a>
-        <a href="#" class="social-card">
-          <div class="social-icon">✉️</div>
-          <h3>邮箱</h3>
-          <p>zhangwei@example.com</p>
-          <span>欢迎交流与合作</span>
-        </a>
-      </div>
-    </div>
-  </section>
+    <section id="about" class="section section-alt">
+        <div class="section-inner">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <p class="about-intro">
+                    你好，我是刘太阳<br>
+                    AI探索者 & 社科爱好者<br>
+                    信奉长期主义，践行输出式学习<br>
+                    【太阳不加班】账号主理人
+                </p>
+                <div class="contact-links">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.133 0 .24-.108.24-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.492.492 0 0 1 .178-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.952-7.062-6.122z"/></svg>
+                        </div>
+                        <span class="contact-text">Freedom20240617</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.547L12 16.463l-6.545-4.91v9.456H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.674 12 9.546l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                        </div>
+                        <span class="contact-text">2394686830@qq.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-text">保持好奇，持续创造。</p>
-      <p class="footer-copy">© 2026 刘太阳. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2026 刘太阳. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <div class="modal-overlay" id="prompt-modal">
+        <div class="modal">
+            <div class="modal-toolbar">
+                <button class="modal-download" id="prompt-download-btn" title="下载 Markdown 文件">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    下载
+                </button>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="prompt-modal-body"></div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="report-modal">
+        <div class="modal modal-wide">
+            <div class="modal-toolbar">
+                <button class="modal-download" id="report-download-btn" title="下载 Markdown 文件">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    下载
+                </button>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="report-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
