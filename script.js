@@ -531,6 +531,14 @@ const skillContent = {
     'deep-reading': DEEP_READING_SKILL_MD
 };
 
+// ========== Visit Counter ==========
+(function() {
+    const key = 'personal-website-visits';
+    let count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+    localStorage.setItem(key, count);
+    document.getElementById('visit-count').textContent = count.toLocaleString();
+})();
+
 // ========== Tab Switching ==========
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
