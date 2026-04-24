@@ -120,6 +120,9 @@ body {
 }
 .skill-item h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
 .skill-item p { font-size: 14px; color: var(--text-secondary); }
+.skill-clickable { cursor: pointer; transition: all 0.3s ease; }
+.skill-clickable:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.skill-item-link { font-size: 13px; color: var(--accent); font-weight: 500; display: inline-block; margin-top: 8px; }
 
 /* Resources */
 .resources-list { display: flex; flex-direction: column; gap: 12px; }
@@ -170,6 +173,7 @@ body {
 .social-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .social-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .social-icon svg { width: 28px; height: 28px; }
+.social-icon-img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
 .bilibili-icon { background: #fb7299; color: #fff; }
 .xiaohongshu-icon { background: #ff2442; color: #fff; }
 .github-icon { background: #24292e; color: #fff; }
@@ -184,8 +188,10 @@ body {
 }
 .contact-links { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
 .contact-item { display: flex; align-items: center; gap: 10px; }
-.contact-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; }
-.contact-icon svg { width: 18px; height: 18px; color: var(--text-secondary); }
+.contact-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.contact-icon svg { width: 18px; height: 18px; }
+.wechat-icon { background: #07C160; color: #fff; }
+.email-icon { background: #EA4335; color: #fff; }
 .contact-text { font-size: 15px; color: var(--text-tertiary); letter-spacing: -0.01em; }
 
 /* Footer */
