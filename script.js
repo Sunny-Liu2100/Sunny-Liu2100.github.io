@@ -531,31 +531,6 @@ const skillContent = {
     'deep-reading': DEEP_READING_SKILL_MD
 };
 
-// ========== Visit Counter ==========
-(async function() {
-    const countEl = document.getElementById('visit-count');
-    const namespace = 'sunnyliu-website';
-    const key = 'visits';
-
-    try {
-        // CountAPI: global hit counter, free & no signup required
-        const resp = await fetch('https://api.countapi.xyz/hit/' + namespace + '/' + key);
-        if (resp.ok) {
-            const data = await resp.json();
-            countEl.textContent = Number(data.value).toLocaleString();
-            return;
-        }
-    } catch (e) {
-        // Network error, fall through to localStorage fallback
-    }
-
-    // Fallback: localStorage counter
-    const lsKey = 'personal-website-visits';
-    let count = parseInt(localStorage.getItem(lsKey) || '0', 10) + 1;
-    localStorage.setItem(lsKey, count);
-    countEl.textContent = count.toLocaleString();
-})();
-
 // ========== Tab Switching ==========
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {

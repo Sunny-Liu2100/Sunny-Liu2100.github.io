@@ -197,8 +197,6 @@ body {
 /* Footer */
 .footer { text-align: center; padding: 32px 24px; background: var(--bg-alt); }
 .footer p { font-size: 13px; color: var(--text-secondary); }
-.visit-counter { margin-bottom: 8px; font-weight: 500; color: var(--text-tertiary); }
-.visit-counter span { color: var(--accent); font-weight: 600; }
 
 /* Modal */
 .modal-overlay {
